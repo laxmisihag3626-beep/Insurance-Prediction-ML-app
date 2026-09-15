@@ -13,7 +13,7 @@ import streamlit as st
 
 # Web Page Code
 st.title("Health Insurance Prediction")
-img_url = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO8RypBfeV6p2SBEbbcH6iR5TeLH1fP9p1VZnDEI29pw&s=10'
+img_url = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwVHGFNKOfdOaBKfcM0RwoLTxVTrB4jt95FXewQxhCZA&s=10'
 st.image(img_url)
 
 
