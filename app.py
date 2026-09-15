@@ -57,7 +57,7 @@ for index, col_name in enumerate(X.columns):
   all_ans.append(value)
 
 ud = {j:all_ans[i] for i,j in enumerate(X.columns)}
-user_df = pd.DataFrame(all_ans, columns = X.columns)
+user_df = pd.DataFrame([all_ans], columns = X.columns)
 st.write(user_df)
 
 #===================================Prediction===================================
