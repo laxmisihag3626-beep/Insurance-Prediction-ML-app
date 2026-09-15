@@ -52,7 +52,7 @@ for index, col_name in enumerate(X.columns):
   if col_name != "Previous_Insurance":
     value = st.sidebar.slider(f"Select value for {col_name}", min_value = min_v, max_value = max_v)
   else:
-    value = st.sidebar.number_input(f"Select value for {col_name} {0:'No', 1:'Yes'}:")
+    value = st.sidebar.number_input(f"Select value for {col_name} {0:'No', 1:'Yes'}}:")
 
   all_ans.append(value)
 
