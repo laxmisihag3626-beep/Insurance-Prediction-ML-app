@@ -22,6 +22,8 @@ url = 'https://raw.githubusercontent.com/ankitmisk/UIT-data/refs/heads/main/Insu
 df = pd.read_csv(url)
 
 # Step 3: EDA: Exploratory Data Analysis
+df.drop("Customer_ID", axis = 1, inplace = True)
+
 df['Previous_Insurance'] = df['Previous_Insurance'].map({'No':0, 'Yes':1})
 df['Insurance_Bought'] = df['Insurance_Bought'].map({'No':0, 'Yes':1})
 
@@ -54,6 +56,7 @@ for index, col_name in enumerate(X.columns):
 
   all_ans.append(value)
 
+ud = {j:all_ans[i] for i,j in enumerate(x.colimns)}
 user_df = pd.DataFrame(all_ans, columns = X.columns)
 st.write(user_df)
 
@@ -63,7 +66,7 @@ if st.button("Click to Predict"):
   with st.spinner("Predicting"):
     import time
     time.sleep(2)
-final_ans = model.predict(all_ans)[0]
+final_ans = model.predict([all_ans])[0]
 if final_ans == 0:
   st.info("❌Customer will not buy the insurance❌")
 else:
